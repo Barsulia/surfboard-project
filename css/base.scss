@@ -1,10 +1,13 @@
+html {
+  font-size: $baseFontsize;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
-  font-size: $baseFontsize;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

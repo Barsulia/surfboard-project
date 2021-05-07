@@ -4,13 +4,13 @@
 }
 
 .feature__icon {
-  width: 34.69px;
-  max-height: 34.69px;
-  margin-right: 15px;
+  width: rem(35px);
+  max-height: rem(35px);
+  margin-right: rem(15px);
 }
 
 .feature__text {
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: 700;
-  max-width: 90px;
+  max-width: rem(90px);
 }

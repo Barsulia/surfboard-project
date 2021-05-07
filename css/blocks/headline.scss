@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 49px;
+  margin-bottom: rem(49px);
   line-height: 1.2;
 }
 
 .headline__title {
-  margin-bottom: 17px;
+  margin-bottom: rem(17px);
   color: $black;
 }
 

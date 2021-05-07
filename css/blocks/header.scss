@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 
 .menu__list {
@@ -11,7 +11,7 @@
 }
 
 .menu__item {
-  margin-right: 26px;
+  margin-right: rem(26px);
   &:last-child {
     margin-right: 0;
   }
@@ -23,14 +23,14 @@
 
 .phone {
   text-decoration: none;
-  font-size: 22px;
+  font-size: rem(22px);
   line-height: 82%;
   font-weight: bold;
   display: flex;
   align-items: center;
   &__icon-elem {
-    width: 12.83px;
-    height: 13.78px;
-    margin-right: 5.6px;
+    width: rem(12.83px);
+    height: rem(13.78px);
+    margin-right: rem(5.6px);
   }
 }

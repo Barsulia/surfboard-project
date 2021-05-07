@@ -9,7 +9,7 @@
   &::before {
     content: url(./../../img/decor-points.png);
     position: absolute;
-    top: 64px;
+    top: rem(64px);
     right: 0;
     transform: translate(50%, -50%);
   }
@@ -23,5 +23,4 @@
       display: none;
     }
   }
- 
 }

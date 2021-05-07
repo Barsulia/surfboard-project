@@ -1,15 +1,15 @@
 .interactive-avatar {
-  width: 74px;
-  height: 74px;
-  //border: 6px solid transparent;
+  width: rem(74px);
+  height: rem(74px);
+  //border: rem(6px) solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
   &--active {
-    border: 6px solid #FEDB3F;
+    border: rem(6px) solid #FEDB3F;
   }
   &:hover {
-    border: 6px solid #FEDB3F;
+    border: rem(6px) solid #FEDB3F;
   }
 }
 
