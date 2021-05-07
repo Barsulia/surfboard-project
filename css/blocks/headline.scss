@@ -1,0 +1,17 @@
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 49px;
+  line-height: 1.2;
+}
+
+.headline__title {
+  margin-bottom: 17px;
+  color: $black;
+}
+
+.headline__subtitle {
+  text-align: center;
+  max-width: 46%;
+}

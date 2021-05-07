@@ -1,0 +1,11 @@
+.order-section {
+  background: linear-gradient(rgba(43,43,43,.4),rgba(43,43,43,.4)), url(../img/bg-order.png) center top no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  &__title {
+    color: #fff;
+    margin-bottom: 59px;
+  }
+}
+
