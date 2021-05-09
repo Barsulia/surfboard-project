@@ -745,7 +745,7 @@ footer {
   }
 }
 .benefits__item::before {
-  content: url(./../../img/decor-points.png);
+  content: url(../img/decor-points.png);
   position: absolute;
   top: 3.5555555556rem;
   right: 0;
