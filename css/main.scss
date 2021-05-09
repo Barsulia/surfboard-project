@@ -1,14 +1,21 @@
 $containerWidth: 940px;
 $baseFontsize: 18px;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $yellow: #FEDB3F;
 $yellowHover:#FFD517;
 $black: #292929;
 $grey: #666666;
+$blue: #1968B1;
 
 //z-index
 $z-fixed-menu: 100;
+$z-bg-up: -1;
+$z-bg-down: -10;
 
 //media
 @import "./blocks/media";
@@ -23,6 +30,9 @@ $z-fixed-menu: 100;
 //blocks
 @import "./blocks/hero";
 @import "./blocks/header";
+@import "./blocks/menu";
+@import "./blocks/phone";
+@import "./blocks/hamburger";
 @import "./blocks/features";
 @import "./blocks/feature";
 @import "./blocks/btn";
@@ -38,5 +48,10 @@ $z-fixed-menu: 100;
 @import "./blocks/order-section";
 @import "./blocks/form";
 @import "./blocks/radio";
+
+@import "./blocks/map";
+@import "./blocks/footer";
+@import "./blocks/contacts";
+@import "./blocks/socials";
 
 @import "./blocks/fixed-menu";

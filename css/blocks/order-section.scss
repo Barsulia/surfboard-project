@@ -6,5 +6,8 @@
   &__title {
     color: #fff;
     margin-bottom: rem(59px);
+    @include tablets {
+      margin-bottom: 7%;
+    }
   }
 }

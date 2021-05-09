@@ -1,5 +1,13 @@
 html {
   font-size: $baseFontsize;
+
+  @include tablets {
+    font-size: $baseFontsize - 1px;
+  }
+
+  @include phones {
+    font-size: $baseFontsize - 2px;
+  }
 }
 
 html, body {
@@ -18,13 +26,13 @@ body {
 .wrapper {
   overflow: hidden;
   width: 100%;
-  min-width: $containerWidth + 20px;
   min-height: 100%;
   position: relative;
  }
 
 .container {
-  width: $containerWidth;
+  max-width: $containerWidth;
+  width: 95%;
   margin: 0 auto;
 }
 

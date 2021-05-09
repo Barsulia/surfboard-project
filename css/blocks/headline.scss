@@ -4,14 +4,26 @@
   align-items: center;
   margin-bottom: rem(49px);
   line-height: 1.2;
+
+  @include phones {
+    margin-bottom: 3.7rem;
+  }
 }
 
 .headline__title {
   margin-bottom: rem(17px);
   color: $black;
+
+  @include phones {
+    margin-bottom: 0.2rem;
+  }
 }
 
 .headline__subtitle {
   text-align: center;
   max-width: 46%;
+
+  @include phones {
+    max-width: 85%;
+  }
 }

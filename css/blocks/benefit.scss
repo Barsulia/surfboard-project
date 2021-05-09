@@ -1,7 +1,12 @@
 .benefit {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
+
+  @include phones {
+    flex-direction: row;
+  }
 }
 
 .benefit__image-wrapper {
@@ -22,13 +27,31 @@
   transform: translate(-50%, -50%);
 }
 
+.benefit__content {
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 rem(12px);
+  }
+}
+
 .benefit__title {
   color: $black;
   font-size: rem(27px);
   font-weight: bold;
   margin: rem(20px) 0;
+
+  @include phones {
+    margin: 0;
+  }
 }
 
 .benefit__text {
   text-align: center;
+
+  @include phones {
+    text-align: left;
+  }
 }

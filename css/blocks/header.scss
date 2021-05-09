@@ -1,36 +1,17 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: rem(40px);
 }
 
-.menu__list {
-  display: flex;
-  align-items: center;
-}
-
-.menu__item {
-  margin-right: rem(26px);
-  &:last-child {
-    margin-right: 0;
+.header .header__phone {
+  padding-top: rem(10px);
+  @include tablets {
+    display: none;
   }
 }
 
-.menu__link {
-  text-decoration: none;
-}
-
-.phone {
-  text-decoration: none;
-  font-size: rem(22px);
-  line-height: 82%;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  &__icon-elem {
-    width: rem(12.83px);
-    height: rem(13.78px);
-    margin-right: rem(5.6px);
-  }
+.logo {
+  flex-shrink: 0;
 }

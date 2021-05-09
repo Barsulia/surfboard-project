@@ -342,6 +342,16 @@ template {
 html {
   font-size: 18px;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
 
 html, body {
   height: 100%;
@@ -359,13 +369,13 @@ body {
 .wrapper {
   overflow: hidden;
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   position: relative;
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -417,6 +427,30 @@ footer {
   min-height: 36.2222222222rem;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(25, 104, 177, 0.2), rgba(25, 104, 177, 0.2)), url(../img/bg-hero-tablets.png) right 23% bottom/cover no-repeat;
+    position: relative;
+    z-index: -10;
+  }
+  .hero::after {
+    content: "";
+    background: #1968B1;
+    height: 91px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    background-position: right 30% bottom;
+    background-size: auto 90%;
+  }
+}
 
 .hero__container {
   display: flex;
@@ -429,6 +463,29 @@ footer {
 .hero__title-section {
   width: 52%;
 }
+@media screen and (max-width: 768px) {
+  .hero__title-section {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 19%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__title-section {
+    padding-top: 16%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__icon-section {
+    display: none;
+  }
+}
 
 .hero__main-title {
   font-size: 2.6666666667rem;
@@ -436,6 +493,19 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1.1111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__main-title {
+    padding: 0 3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__main-title {
+    font-size: 2.5rem;
+    line-height: 0.9;
+    padding: 0 1%;
+    margin-bottom: 0.6666666667rem;
+  }
 }
 
 .hero__title-desc {
@@ -447,17 +517,43 @@ footer {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 2.2222222222rem;
+}
+
+.header .header__phone {
+  padding-top: 0.5555555556rem;
+}
+@media screen and (max-width: 768px) {
+  .header .header__phone {
+    display: none;
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.menu {
+  margin: 0 1.5rem;
+  padding-top: 0.3888888889rem;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
 }
 
 .menu__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu__item {
   margin-right: 1.4444444444rem;
+  margin-bottom: 0.5rem;
 }
 .menu__item:last-child {
   margin-right: 0;
@@ -465,6 +561,7 @@ footer {
 
 .menu__link {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .phone {
@@ -475,10 +572,45 @@ footer {
   display: flex;
   align-items: center;
 }
+.phone__icon {
+  flex-shrink: 0;
+}
 .phone__icon-elem {
   width: 0.7127777778rem;
   height: 0.7655555556rem;
   margin-right: 0.3111111111rem;
+}
+
+.phone__icon-elem--white {
+  fill: #fff;
+}
+
+.phone__icon-elem--black {
+  fill: #292929;
+}
+
+.phone__text {
+  white-space: nowrap;
+}
+
+.hamburger {
+  width: 26px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  align-self: center;
+}
+.hamburger__line {
+  display: block;
+  height: 4.5px;
+  background: #fff;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
 }
 
 .features {
@@ -498,9 +630,13 @@ footer {
 }
 
 .feature__icon {
-  width: 1.9444444444rem;
-  max-height: 1.9444444444rem;
+  height: 1.9444444444rem;
   margin-right: 0.8333333333rem;
+}
+
+.feature__icon-elem {
+  width: 1.9444444444rem;
+  height: 1.9444444444rem;
 }
 
 .feature__text {
@@ -559,19 +695,39 @@ footer {
   margin-bottom: 2.7222222222rem;
   line-height: 1.2;
 }
+@media screen and (max-width: 480px) {
+  .headline {
+    margin-bottom: 3.7rem;
+  }
+}
 
 .headline__title {
   margin-bottom: 0.9444444444rem;
   color: #292929;
+}
+@media screen and (max-width: 480px) {
+  .headline__title {
+    margin-bottom: 0.2rem;
+  }
 }
 
 .headline__subtitle {
   text-align: center;
   max-width: 46%;
 }
+@media screen and (max-width: 480px) {
+  .headline__subtitle {
+    max-width: 85%;
+  }
+}
 
 .benefits {
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .benefits {
+    flex-direction: column;
+  }
 }
 
 .benefits__item {
@@ -579,12 +735,26 @@ footer {
   padding: 0 3%;
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    padding: 0;
+    margin-bottom: 3.3rem;
+  }
+  .benefits__item:last-child {
+    margin-bottom: 0;
+  }
+}
 .benefits__item::before {
   content: url(./../../img/decor-points.png);
   position: absolute;
   top: 3.5555555556rem;
   right: 0;
   transform: translate(50%, -50%);
+}
+@media screen and (max-width: 480px) {
+  .benefits__item::before {
+    display: none;
+  }
 }
 .benefits__item:first-child {
   padding-left: 0;
@@ -597,9 +767,15 @@ footer {
 }
 
 .benefit {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .benefit {
+    flex-direction: row;
+  }
 }
 
 .benefit__image-wrapper {
@@ -620,15 +796,35 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 480px) {
+  .benefit__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0.6666666667rem;
+  }
+}
+
 .benefit__title {
   color: #292929;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1.1111111111rem 0;
 }
+@media screen and (max-width: 480px) {
+  .benefit__title {
+    margin: 0;
+  }
+}
 
 .benefit__text {
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .benefit__text {
+    text-align: left;
+  }
 }
 
 .reviews__content {
@@ -636,9 +832,21 @@ footer {
   padding: 2.3333333333rem 7.8888888889rem 2.3333333333rem 2.3333333333rem;
   margin-bottom: 0.8333333333rem;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    padding: 3.1111111111rem 1.2777777778rem 2.3333333333rem;
+    margin-bottom: 1.7777777778rem;
+  }
+}
 
 .reviews__content-inner {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .reviews__content-inner {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews__avatar {
@@ -650,12 +858,27 @@ footer {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 768px) {
+  .reviews__avatar {
+    width: 7.2222222222rem;
+    height: 7.2222222222rem;
+  }
+}
 
 .reviews__info {
   flex: 1;
   margin-left: 2.1111111111rem;
   padding-top: 1.5555555556rem;
   line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+  .reviews__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 .reviews__title {
@@ -725,9 +948,25 @@ footer {
   color: #fff;
   margin-bottom: 3.2777777778rem;
 }
+@media screen and (max-width: 768px) {
+  .order-section__title {
+    margin-bottom: 7%;
+  }
+}
 
 .form {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
+  }
 }
 
 .form__col {
@@ -737,10 +976,20 @@ footer {
 .form__col:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 768px) {
+  .form__col {
+    margin-right: 0;
+  }
+}
 
 .form__row {
   display: flex;
   margin-bottom: 0.3888888889rem;
+}
+@media screen and (max-width: 768px) {
+  .form__row {
+    margin-bottom: 14px;
+  }
 }
 
 .form__block {
@@ -754,23 +1003,50 @@ footer {
 .form__input {
   width: 100%;
   border: 0.1666666667rem solid transparent;
-  border-radius: 0.2222222222rem;
+  border-radius: 4px;
   padding: 0.9444444444rem 0.7222222222rem;
 }
 .form__input:focus {
   outline: none;
   border-color: #FEDB3F;
 }
+@media screen and (max-width: 768px) {
+  .form__input {
+    padding: 0.3888888889rem 0.5555555556rem;
+  }
+}
+
 .form__input--textarea {
   height: 8.4444444444rem;
   resize: none;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .form__input--textarea {
+    margin-bottom: 0.5555555556rem;
+    height: 4.5555555556rem;
+  }
 }
 
 .form__controls {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1.1111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .form__controls {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form__controls {
+    justify-content: center;
+  }
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: center;
 }
 
 .radio {
@@ -818,11 +1094,93 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.map {
+  position: relative;
+  height: 100%;
+}
+
+.map__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.9444444444rem 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.1666666667rem;
+  color: #292929;
+}
+@media screen and (max-width: 480px) {
+  .contacts {
+    margin-bottom: 0.5555555556rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contacts__phone {
+  padding-top: 0.3333333333rem;
+}
+@media screen and (max-width: 480px) {
+  .contacts__phone {
+    padding-top: 0.6666666667rem;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.1111111111rem;
+}
+
+.socials__item {
+  margin-right: 0.7777777778rem;
+}
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__icon {
+  fill: #B3B3B3;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+}
+.socials__icon:hover {
+  fill: #292929;
+  transition: 0.3s;
+}
+
 .fixed-menu {
   position: fixed;
   top: 35%;
   right: 4%;
   z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
 }
 
 .fixed-menu__item {

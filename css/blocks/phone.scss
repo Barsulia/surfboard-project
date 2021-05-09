@@ -1,0 +1,29 @@
+.phone {
+  text-decoration: none;
+  font-size: rem(22px);
+  line-height: 82%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    flex-shrink: 0;
+  }
+  &__icon-elem {
+    width: rem(12.83px);
+    height: rem(13.78px);
+    margin-right: rem(5.6px);
+  }
+}
+
+.phone__icon-elem--white {
+  fill: #fff
+}
+
+.phone__icon-elem--black {
+  fill: $black
+}
+
+.phone__text {
+  white-space: nowrap;
+}
