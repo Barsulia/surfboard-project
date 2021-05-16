@@ -25,3 +25,22 @@
   text-decoration: none;
   white-space: nowrap;
 }
+
+.menu--vertical {
+  font-size: rem(36px);
+  line-height: rem(72px);
+  color: #fff;
+  margin: auto;
+  @include tablets {
+    display: block;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .menu__item {
+      margin: 0;
+    }
+  }
+}

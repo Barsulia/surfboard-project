@@ -1,0 +1,20 @@
+.fullscreen-menu {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #313131;
+  z-index: $z-fullscreen-menu;
+}
+
+.fullscreen-menu__pic {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: rem(42px);
+  right: rem(42px);
+}
