@@ -9,6 +9,10 @@
   bottom: 0;
   background: #313131;
   z-index: $z-fullscreen-menu;
+
+  &.active {
+    display: flex;
+  }
 }
 
 .fullscreen-menu__pic {

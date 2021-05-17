@@ -429,26 +429,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .hero {
-    background: linear-gradient(rgba(25, 104, 177, 0.2), rgba(25, 104, 177, 0.2)), url(../img/bg-hero-tablets.png) right 23% bottom/cover no-repeat;
-    position: relative;
-    z-index: -10;
-  }
-  .hero::after {
-    content: "";
-    background: #1968B1;
-    height: 91px;
-    width: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero {
-    background-position: right 30% bottom;
-    background-size: auto 90%;
+    background: linear-gradient(#1968b1, #1968b1) left top/auto 5.0555555556rem no-repeat, linear-gradient(rgba(25, 104, 177, 0.2), rgba(25, 104, 177, 0.2)), url(../img/bg-hero-tablets.png) right 25% bottom/cover no-repeat;
   }
 }
 
@@ -569,6 +550,7 @@ footer {
   line-height: 4rem;
   color: #fff;
   margin: auto;
+  padding: 0;
 }
 @media screen and (max-width: 768px) {
   .menu--vertical {
@@ -983,7 +965,8 @@ footer {
   }
 }
 .dropdown:hover .dropdown__menu {
-  right: 0;
+  left: 5.0555555556rem;
+  transition: opacity 0.6s;
 }
 .dropdown:hover .dropdown__link {
   background: #3465A3;
@@ -1021,11 +1004,21 @@ footer {
   width: 15.1666666667rem;
   height: 16.1666666667rem;
   top: 0;
-  transition: opacity 0.6s;
-  right: 9999px;
+  left: 9999px;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.06);
   border-radius: 4px;
+  color: #000;
+}
+.dropdown__menu::after {
+  content: "";
+  display: block;
+  height: 16.1666666667rem;
+  left: -5.0555555556rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 .dropdown__list {
@@ -1452,6 +1445,9 @@ footer {
   bottom: 0;
   background: #313131;
   z-index: 1000;
+}
+.fullscreen-menu.active {
+  display: flex;
 }
 
 .fullscreen-menu__pic {

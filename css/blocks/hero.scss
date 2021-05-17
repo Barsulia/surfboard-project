@@ -6,25 +6,14 @@
   color: #fff;
 
   @include tablets {
-    background: linear-gradient(rgba(25, 104, 177, .2),rgba(25, 104, 177, .2)), url(../img/bg-hero-tablets.png) right 23% bottom / cover no-repeat;
-    position: relative;
-    z-index: $z-bg-down;
-    &::after {
-      content: "";
-      background: $blue;
-      height: 91px;
-      width: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: $z-bg-up;
-    }
+    background: linear-gradient(rgba(25, 104, 177, 1),rgba(25, 104, 177, 1)) left top / auto rem(91px) no-repeat,
+    linear-gradient(rgba(25, 104, 177, .2),rgba(25, 104, 177, .2)), 
+    url(../img/bg-hero-tablets.png) right 25% bottom / cover no-repeat;
   }
-  @include phones {
-    background-position: right 30% bottom;
-    background-size: auto 90%;
-  }
+  //@include phones {
+    //background-position: right 30% bottom;
+    //background-size: auto 90%;
+  
 }
 
 .hero__container {

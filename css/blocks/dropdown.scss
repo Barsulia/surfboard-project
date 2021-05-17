@@ -5,7 +5,8 @@
   }
   &:hover {
     .dropdown__menu {
-      right: 0;
+      left: rem(91px);
+      transition: opacity 0.6s;
     }
     .dropdown__link {
       background: #3465A3;
@@ -45,12 +46,21 @@
   width: rem(273px);
   height: rem(291px);
   top: 0;
-  transition: opacity .6s;
-  right: 9999px;
+  left: 9999px;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
-  //backdrop-filter: blur(40px);
+  box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.06);
   border-radius: 4px;
+  color: #000;
+  &::after {
+    content: "";
+    display: block;
+    height: rem(291px);
+    left: rem(-91px);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
 }
 
 .dropdown__list {
