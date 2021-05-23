@@ -1,15 +1,32 @@
-.reviews__content {
+.reviews__list {
+  position: relative;
+  min-height: rem(280px);
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: .3s;
+  pointer-events: none;
   background: #F8FAF9;
   padding: rem(42px) rem(142px) rem(42px) rem(42px);
   margin-bottom: rem(15px);
-
+  &.active {
+    position: static;
+    opacity: 1;
+    pointer-events: unset;
+  }
   @include tablets {
     padding: rem(56px) rem(23px) rem(42px);
     margin-bottom: rem(32px);
   }
 }
 
-.reviews__content-inner {
+.reviews__content-wrapper {
   display: flex;
 
   @include tablets {

@@ -42,8 +42,9 @@ $z-fullscreen-menu: 1000;
 @import "./blocks/benefit";
 
 @import "./blocks/product";
-@import "./blocks/arrow";
 @import "./blocks/dropdown";
+
+@import "./blocks/team";
 
 @import "./blocks/reviews";
 @import "./blocks/interactive-avatar";
@@ -58,4 +59,5 @@ $z-fullscreen-menu: 1000;
 @import "./blocks/socials";
 
 @import "./blocks/fixed-menu";
+@import "./blocks/modal";
 @import "./blocks/fullscreen-menu";

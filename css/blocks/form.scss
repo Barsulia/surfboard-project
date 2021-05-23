@@ -45,11 +45,14 @@
   border: rem(3px) solid transparent;
   border-radius: 4px;
   padding: rem(17px) rem(13px);
+  &.input-error {
+    outline: none;
+    border-color: orangered;
+  }
   &:focus {
     outline: none;
     border-color: $yellow;
   }
-
   @include tablets {
     padding: rem(7px) rem(10px);
   }
