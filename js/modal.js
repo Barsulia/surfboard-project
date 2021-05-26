@@ -46,13 +46,15 @@ $('.form').submit(e => {
     request.always(() => {
       $.fancybox.open({
         src: "#modal",
-        type: "inline"
+        type: "inline",
       });
+      $('body').addClass("no-scroll");
     });
   }
 });
 
 $('.js-submit-btn').on('click', e => {
   e.preventDefault();
+  $('body').removeClass("no-scroll");
   $.fancybox.close();
 })

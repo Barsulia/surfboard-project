@@ -365,6 +365,10 @@ body {
   position: relative;
   color: #666666;
 }
+body.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
 
 .wrapper {
   overflow: hidden;
@@ -1290,10 +1294,10 @@ footer {
   position: relative;
 }
 .interactive-avatar--active {
-  border: 0.3333333333rem solid #FEDB3F;
+  border: 6px solid #FEDB3F;
 }
 .interactive-avatar:hover {
-  border: 0.3333333333rem solid #FEDB3F;
+  border: 6px solid #FEDB3F;
 }
 
 .interactive-avatar__link {
