@@ -4,6 +4,17 @@
   right: 4%;
   z-index: $z-fixed-menu;
 
+  &--dark {
+    .fixed-menu__item--active {
+      .fixed-menu__link {
+        border-color: #000;
+      }
+    }
+    .fixed-menu__link::before {
+      background: #000;
+    }
+  }
+
   @include tablets {
     display: none;
   }

@@ -1,0 +1,81 @@
+.surfboards-menu-section {
+  background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)), url(../../img/bg-surfboards-menu.jpg) center / cover no-repeat;
+  position: relative;
+}
+
+.surfboards-menu-section__title {
+  color: #fff;
+  position: absolute;
+  top: rem(108px);
+  left: rem(84px);
+  
+  @include tablets {
+    top: rem(84px);
+    left: rem(40px);
+  }
+  @include phones {
+    top: rem(76px);
+    left: rem(10px);
+  }
+}
+
+.surfboards-menu {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.surfboards-menu__item {
+  display: flex;
+}
+
+.surfboards-menu__title {
+  width: rem(102px);
+  text-decoration: none;
+  position: relative;
+  display: block;
+  &::after {
+    content: "";
+    display: block;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.surfboards-menu__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.surfboards-menu__text {
+  position: absolute;
+  bottom: 0;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-weight: bold;
+  font-size: rem(48px);
+  line-height: 1.2;
+  padding: rem(39px) rem(22px) rem(147px);
+  z-index: 1;
+}
+
+.surfboards-menu__container {
+  font-size: rem(16px);
+  width: 0;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(51, 53, 55, 0.8);
+  transition: .6s;
+}
+
+.surfboards-menu__content {
+  padding: rem(31px) rem(80px) rem(31px) rem(38px);
+}
