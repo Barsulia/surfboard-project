@@ -1,0 +1,151 @@
+.player-section {
+  background: #F8FAF9;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: rem(662px);
+
+  &.active .player__splash {
+    display: none;
+  }
+
+  &.paused {
+    .player__start {
+      background: #626262;
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: rem(4px);
+        top: 0;
+        bottom: 0;
+        background: #fff;
+      }
+
+      &::after {
+        right: 0;
+      }
+      &::before {
+        left: 0;
+      }
+    }
+  }  
+}
+
+.player__elem {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-height: 100%;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../img/bg-surfboards-menu-shortboard.jpg) center center/ cover no-repeat;
+  cursor: pointer;
+
+  &::before {
+    content: url(../../img/player-start.svg);
+    display: block;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.player__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: rem(35px);
+  background: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(22px);
+}
+
+.player__start {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  background: url(../../img/player-start.svg) center center / cover no-repeat;
+  width: rem(11px);
+  height: rem(16px);
+}
+
+.player__playback {
+  height: rem(16px);
+  position: relative;
+  width: 72%;
+
+  &-duration {
+    content: "";
+    height: rem(4px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #626262;
+    display: block;
+    transform: translateY(-50%);
+  }
+}
+
+.player__volume {
+  height: rem(16px);
+  position: relative;
+  width: 9%;
+
+  &-value {
+    content: "";
+    height: rem(4px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #626262;
+    display: block;
+    transform: translateY(-50%);
+  }
+}
+
+.player__playback-button,
+.player__volume-button {
+  background: #626262;
+  border-radius: 50%;
+  border: none;
+  width: rem(12px);
+  height: rem(12px);
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.player__sound {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  background: url(../../img/player-sound.svg) center center / cover no-repeat;
+  width: rem(11px);
+  height: rem(16px);
+}

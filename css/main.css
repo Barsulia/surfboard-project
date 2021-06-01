@@ -1408,6 +1408,148 @@ footer {
   border: 6px solid #FEDB3F;
 }
 
+.player-section {
+  background: #F8FAF9;
+}
+.player-section__container {
+  display: flex;
+  justify-content: center;
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 36.7777777778rem;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  background: #626262;
+  position: relative;
+}
+.player.paused .player__start::after, .player.paused .player__start::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.2222222222rem;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+}
+.player.paused .player__start::after {
+  right: 0;
+}
+.player.paused .player__start::before {
+  left: 0;
+}
+
+.player__elem {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-height: 100%;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../img/bg-surfboards-menu-shortboard.jpg) center center/cover no-repeat;
+  cursor: pointer;
+}
+.player__splash::before {
+  content: url(../../img/player-start.svg);
+  display: block;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.9444444444rem;
+  background: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.2222222222rem;
+}
+
+.player__start {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  background: url(../../img/player-start.svg) center center/cover no-repeat;
+  width: 0.6111111111rem;
+  height: 0.8888888889rem;
+}
+
+.player__playback {
+  height: 0.8888888889rem;
+  position: relative;
+  width: 72%;
+}
+.player__playback-duration {
+  content: "";
+  height: 0.2222222222rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.player__volume {
+  height: 0.8888888889rem;
+  position: relative;
+  width: 9%;
+}
+.player__volume-value {
+  content: "";
+  height: 0.2222222222rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.player__playback-button,
+.player__volume-button {
+  background: #626262;
+  border-radius: 50%;
+  border: none;
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.player__sound {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  background: url(../../img/player-sound.svg) center center/cover no-repeat;
+  width: 0.6111111111rem;
+  height: 0.8888888889rem;
+}
+
 .order-section {
   background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../img/bg-order.png) center top no-repeat;
   background-size: cover;
