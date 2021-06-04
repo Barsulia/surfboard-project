@@ -63,10 +63,10 @@ task('styles', () => {
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(px2rem({
-      dpr: 1,             // base device pixel ratio (default: 2)
-      rem: 18,            // root element (html) font-size (default: 16)
-    }))
+    //.pipe(px2rem({
+      //dpr: 1,             // base device pixel ratio (default: 2)
+      //rem: 18,            // root element (html) font-size (default: 16)
+    //}))
     .pipe(gulpif(env == 'prod', autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
@@ -78,10 +78,10 @@ task('styles', () => {
     .pipe(reload({ stream: true }));
 });
  
-const libs = [
+/*const libs = [
   'node_modules/jquery/dist/jquery.js',
   'src/scripts/*.js'
-];
+];*/
  
 task('scripts', () => {
   return src([...JS_LIBS, 'src/scripts/*.js'])

@@ -5,10 +5,10 @@ $(document).ready(() => {
     let linkTarget = $(this).closest('.team__item');
     let linkActive = elem => {
       $(elem).closest('.team__item').addClass('team__item--active');
-      if (myWidth <= 768) {
-        let teamAva = $(elem).prev('.team__avatar');
-        $(elem).after(teamAva);
-      };
+      //if (myWidth <= 768) {
+        //let teamAva = $(elem).prev('.team__avatar');
+        //$(elem).after(teamAva);
+      //};
     };
     let linkNotActive = element => {
       $(element).closest('.team__item').removeClass('team__item--active');

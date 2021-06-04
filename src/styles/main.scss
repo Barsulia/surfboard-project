@@ -16,12 +16,12 @@ $blue: #1968B1;
 $z-fixed-menu: 100;
 $z-fullscreen-menu: 1000;
 
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&display=swap');
 //media
 @import "./blocks/media";
-
-//setups
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap");
 @import "./base";
 @import "./blocks/*.scss";
 //blocks
