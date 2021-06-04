@@ -9,7 +9,7 @@ const validateFields = (form, fieldsArray) => {
   return errorFields.length == 0;
 };
 
-$('.form').submit(e => {
+$('.form').on("submit", e => {
   e.preventDefault();
   const form = $(e.currentTarget);
   const name = form.find("[name='name']");
@@ -57,4 +57,4 @@ $('.js-submit-btn').on('click', e => {
   e.preventDefault();
   $('body').removeClass("no-scroll");
   $.fancybox.close();
-})
+});

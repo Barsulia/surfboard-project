@@ -1,3 +1,5 @@
 idea/
 sshkey
 sshkey.pub
+node_modules/
+dist/

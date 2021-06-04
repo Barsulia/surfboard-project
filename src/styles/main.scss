@@ -16,18 +16,16 @@ $blue: #1968B1;
 $z-fixed-menu: 100;
 $z-fullscreen-menu: 1000;
 
+
 //media
 @import "./blocks/media";
 
-//normalize
-@import "normalize";
-
 //setups
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
-@import "base";
-
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap");
+@import "./base";
+@import "./blocks/*.scss";
 //blocks
-@import "./blocks/hero";
+/*@import "./blocks/hero";
 @import "./blocks/header";
 @import "./blocks/menu";
 @import "./blocks/phone";
@@ -64,4 +62,4 @@ $z-fullscreen-menu: 1000;
 
 @import "./blocks/fixed-menu";
 @import "./blocks/modal";
-@import "./blocks/fullscreen-menu";
+@import "./blocks/fullscreen-menu";*/
